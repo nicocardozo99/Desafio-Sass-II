@@ -1,0 +1,61 @@
+.grilla {
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 53%, #6e94a2 100%);
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     h1 {
+        font-family: sans-serif;
+        font-size: 40px;
+        align-self: flex-start;
+        margin: 10px;
+        color: #D9AFD9;
+    }
+     h2 {
+        font-family: sans-serif;
+        font-size: 30px;
+        margin: 10px;
+        color: aliceblue;
+        animation-duration: 2s;
+        animation-name: aparecer;
+        animation-delay: 0s;
+        
+    }
+
+    @mixin sizes ($height, $width, $mbottom) {
+        height: $height;
+        width: $width;
+        margin-bottom: $mbottom;
+    }
+    .imagen {
+        @include sizes(350px, 250px, 40px)
+        
+    }
+
+    p {
+        font-family: sans-serif;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        color: aliceblue;
+        width: 350px;
+    }
+
+$redes: (
+    40px: white,
+    50px: #000,
+    60px: orange,
+    70px: yellow
+
+    );
+@each $red, $font in $redes {
+    .btn--#($red) {
+        font-size: $red;
+        color: $font;
+        margin-bottom: 40px;
+    }
+}
+}
+}
